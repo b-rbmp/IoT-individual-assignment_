@@ -1,4 +1,4 @@
-# iot-individual-assignment
+# iot-individual-assignment_
 Individual Assignment for the Internet-of-Things Algorithms and Services 2023-2024 course at Sapienza
 
 Student: Bernardo PERRONE DE MENEZES BULCAO RIBEIRO (2163025)
@@ -190,4 +190,4 @@ In conclusion, due to the design choice of using a firmware sampling approach an
 
 ## Hands-On Walkthrough of the System and Setup
 
-For a detailed walkthrough of the system and setup, please refer to the Setup.md file.
+For a detailed walkthrough of the system and setup, please refer to the [Setup.md file](https://github.com/b-rbmp/IoT-individual-assignment_/blob/b858a2ea7ffe0310c2dae342239707702645fd47/SETUP.md)
