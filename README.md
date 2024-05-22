@@ -1,7 +1,7 @@
 # iot-individual-assignment_
 Individual Assignment for the Internet-of-Things Algorithms and Services 2023-2024 course at Sapienza
 
-Student: Bernardo PERRONE DE MENEZES BULCAO RIBEIRO (2163025)
+Student: Bernardo PERRONE DE MENEZES BULCAO RIBEIRO (Matricola: 2163025)
 
 ## Technical Details
 
@@ -9,7 +9,7 @@ Please note that the app_main function follows the order of the assignment quest
 
 ### 0. Target device
 
-This assignment was completed using a real ESP32 microcontroller. This was chosen due to the fact that MQTT is not supported by IoT-Lab.
+This assignment was completed using a real ESP32 microcontroller.
 
 ### 1. Setup and Initialization of Libraries
 
