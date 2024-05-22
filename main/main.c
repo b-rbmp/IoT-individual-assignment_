@@ -103,7 +103,7 @@ float input_signal_3(float t) {
  * @return Pointer to the output array containing the sampled signal.
  */
 float* sample_signal_fixed_with_delay(float *output, int len, float sampling_rate, signal_function_t signal_func) {
-    ESP_LOGI(TAG, "Sampling signal with fixed memory allocation...");
+    ESP_LOGI(TAG, "Sampling signal with fixed memory allocation at %f Hz", sampling_rate);
 
     // Calculate the time between samples in milliseconds
     float time_between_samples_ms = 1000.0 / sampling_rate;
@@ -116,8 +116,8 @@ float* sample_signal_fixed_with_delay(float *output, int len, float sampling_rat
         // Percentage of samples completed
         float percent_complete = (float)(i + 1) / len * 100;
 
-        // Only log every 50 samples
-        if (i % 50 == 0) {
+        // Only log every 200 samples
+        if (i % 200 == 0) {
             ESP_LOGI(TAG, "Taking Sample %i: %f | %.2f%% complete", i + 1, output[i], percent_complete);
         }
         
@@ -147,7 +147,7 @@ float* sample_signal_fixed_with_delay(float *output, int len, float sampling_rat
  *         Returns NULL if memory allocation fails.
  */
 float* sample_signal_dynamic_with_delay(signal_function_t signal_func, float sampling_frequency, float time_window, int* out_num_samples) {
-    ESP_LOGI(TAG, "Sampling signal with dynamic memory allocation...");
+    ESP_LOGI(TAG, "Sampling signal with dynamic memory allocation at %f Hz for %f seconds", sampling_frequency, time_window);
 
     // Calculate the number of samples
     int num_samples = (int)(sampling_frequency * time_window);
@@ -171,8 +171,8 @@ float* sample_signal_dynamic_with_delay(signal_function_t signal_func, float sam
         // Percentage of samples completed
         float percent_complete = (float)(i + 1) / num_samples * 100;
 
-        // Log the progress every 50 samples
-        if (i % 50 == 0) {
+        // Log the progress every 200 samples
+        if (i % 200 == 0) {
             ESP_LOGI(TAG, "Taking Sample %i: %f | %.2f%% complete", i + 1, signal_[i], percent_complete);
         }
 
