@@ -56,7 +56,7 @@ This is demonstrated in the function measure_max_sampling_signal(), which simula
 
 Following the example provided in the official repository https://github.com/espressif/esp-dsp/blob/master/examples/fft/README.md, the power spectrum of the signal is calculated using the FFT, transforming it from the time domain to the frequency domain. After the FFT, the output data is reordered through bit reversal to ensure proper sequence. The complex FFT output is converted into two separate real vectors, allowing for the calculation of the power spectrum. The power spectrum is computed for each frequency component, quantifying the signal's power distribution across frequencies.
 
-After running the program once, we can see that the rightmost significant value of the power spectrum is 41.917538, which is at index 205. giData max[205] = 41.917538. Since we have 4096 power spectrum components, and the sampling frequency is 100Hz, each component is
+After running the program once, we can see that the rightmost significant value of the power spectrum is 41.917538, which is at index 205. Data max[205] = 41.917538. Since we have 4096 power spectrum components, and the sampling frequency is 100Hz, each component is
 100/4096 = 0.0244Hz. The maximum frequency of our signal is 0.0244 * 205 = 5Hz (corresponding to the sinusoid with the highest frequency
 in the sum of sinusoids). The optimal sampling frequency is then 10Hz, following the Nyquist theorem. The result of the FFT is shown below:
 
